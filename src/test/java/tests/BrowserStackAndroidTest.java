@@ -21,8 +21,8 @@ public class BrowserStackAndroidTest extends BaseForTest {
         step("Tap login",()->
                 $(MobileBy.id("org.wikipedia.alpha:id/explore_overflow_account_container")).click());
         step("Enter login",()->
-                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).setValue("testUsername"));
+                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).setValue("testUser"));
         step("Login is presented",()->
-                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).shouldHave(Condition.text("testUsername")));
+                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).shouldHave(Condition.text("testUser")));
     }
 }
