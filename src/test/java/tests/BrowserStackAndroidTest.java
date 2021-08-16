@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 
 
 @Tag("selenide_android")
-public class BrowserStackAndroidSelenideTests extends TestBase {
+public class BrowserStackAndroidTest extends BaseForTest {
 
     @Test
     @DisplayName("Enter login and check if its value exists")
@@ -21,8 +21,8 @@ public class BrowserStackAndroidSelenideTests extends TestBase {
         step("Tap login",()->
                 $(MobileBy.id("org.wikipedia.alpha:id/explore_overflow_account_container")).click());
         step("Enter login",()->
-                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).setValue("1234"));
+                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).setValue("testUsername"));
         step("Login is presented",()->
-                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).shouldHave(Condition.text("1234")));
+                $(MobileBy.id("org.wikipedia.alpha:id/login_username_text")).shouldHave(Condition.text("testUsername")));
     }
 }

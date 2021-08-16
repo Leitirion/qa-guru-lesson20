@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.getSessionId;
 
-public class TestBase {
+public class BaseForTest {
 
     @BeforeAll
     public static void setup() {
